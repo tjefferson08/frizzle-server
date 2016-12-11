@@ -39,4 +39,5 @@ config :metro_server_phoenix, MetroServerPhoenix.Repo,
   password: "postgres",
   database: "metro_server_phoenix_dev",
   hostname: "localhost",
-  pool_size: 10
+  pool_size: 10,
+  extensions: [{Geo.PostGIS.Extension, []}]
