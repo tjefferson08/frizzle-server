@@ -1,11 +1,8 @@
 defmodule Frizzle.StopControllerTest do
   use Frizzle.ConnCase
 
-  test "GET /api/stops/near-me"
-  test "GET /api/stops/with-routes"
-
-  test "GET /api/stops/near-me with params", %{conn: conn} do
-    conn = get conn, "/api/stops/near-me"
-    assert html_response(conn, 200) =~ "Welcome to Phoenix!"
-  end
+  # test "GET /api/stops/near-me no params" do
+  #   conn = get conn, "/api/stops/near-me?lat=&lon="
+  #   assert json_response(conn, 400)
+  # end
 end
