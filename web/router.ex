@@ -1,28 +1,14 @@
 defmodule MetroServerPhoenix.Router do
   use MetroServerPhoenix.Web, :router
 
-  pipeline :browser do
-    plug :accepts, ["html"]
-    plug :fetch_session
-    plug :fetch_flash
-    plug :protect_from_forgery
-    plug :put_secure_browser_headers
-  end
-
   pipeline :api do
     plug :accepts, ["json"]
   end
 
-  scope "/", MetroServerPhoenix do
-    pipe_through :browser # Use the default browser stack
+  scope "/api", MetroServerPhoenix do
+    pipe_through :api
 
-    get "/", PageController, :index
-    get "/hello", HelloController, :index
-    get "/hello/:messenger", HelloController, :show
+    get "/stops/near-me", StopController, :near_me
+    get "/stops/with-routes", StopController, :with_routes
   end
-
-  # Other scopes may use custom stacks.
-  # scope "/api", MetroServerPhoenix do
-  #   pipe_through :api
-  # end
 end
