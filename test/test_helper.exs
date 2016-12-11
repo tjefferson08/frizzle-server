@@ -1,4 +1,4 @@
 ExUnit.start
 
-Ecto.Adapters.SQL.Sandbox.mode(MetroServerPhoenix.Repo, :manual)
+Ecto.Adapters.SQL.Sandbox.mode(Frizzle.Repo, :manual)
 

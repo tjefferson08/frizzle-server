@@ -1,4 +1,4 @@
-defmodule MetroServerPhoenix.ChannelCase do
+defmodule Frizzle.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -20,22 +20,22 @@ defmodule MetroServerPhoenix.ChannelCase do
       # Import conveniences for testing with channels
       use Phoenix.ChannelTest
 
-      alias MetroServerPhoenix.Repo
+      alias Frizzle.Repo
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
 
 
       # The default endpoint for testing
-      @endpoint MetroServerPhoenix.Endpoint
+      @endpoint Frizzle.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(MetroServerPhoenix.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Frizzle.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(MetroServerPhoenix.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Frizzle.Repo, {:shared, self()})
     end
 
     :ok

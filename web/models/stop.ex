@@ -1,6 +1,5 @@
-defmodule MetroServerPhoenix.Stop do
-  use MetroServerPhoenix.Web, :model
-  import Ecto.Query
+defmodule Frizzle.Stop do
+  use Frizzle.Web, :model
 
   @primary_key {:stop_id, :integer, []}
   schema "stops" do
@@ -59,7 +58,8 @@ defmodule MetroServerPhoenix.Stop do
       [ stop_id, stop_name, stop_desc, stop_distance ] = row
       %{stop_id: stop_id,
         stop_name: stop_name,
-        stop_desc: stop_desc
+        stop_desc: stop_desc,
+        stop_distance: stop_distance
       }
     end)
   end
@@ -88,7 +88,7 @@ defmodule MetroServerPhoenix.Stop do
 
   # def include_routes!(repo, stop_ids) do
   #   repo.all(
-  #     from stop_time in MetroServerPhoenix.StopTime,
+  #     from stop_time in Frizzle.StopTime,
   #     join: trip in assoc(stop_time, :trip),
   #     join: route in assoc(trip, :route),
   #     where: stop_time.stop_id in ^stop_ids,

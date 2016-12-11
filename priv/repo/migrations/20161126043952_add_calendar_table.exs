@@ -1,4 +1,4 @@
-defmodule MetroServerPhoenix.Repo.Migrations.AddCalendarTable do
+defmodule Frizzle.Repo.Migrations.AddCalendarTable do
   use Ecto.Migration
 
   def change do

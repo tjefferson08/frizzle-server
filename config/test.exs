@@ -2,7 +2,7 @@ use Mix.Config
 
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
-config :metro_server_phoenix, MetroServerPhoenix.Endpoint,
+config :frizzle, Frizzle.Endpoint,
   http: [port: 4001],
   server: false
 
@@ -10,10 +10,10 @@ config :metro_server_phoenix, MetroServerPhoenix.Endpoint,
 config :logger, level: :warn
 
 # Configure your database
-config :metro_server_phoenix, MetroServerPhoenix.Repo,
+config :frizzle, Frizzle.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
   password: "postgres",
-  database: "metro_server_phoenix_test",
+  database: "frizzle_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox

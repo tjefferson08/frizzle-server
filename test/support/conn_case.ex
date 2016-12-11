@@ -1,4 +1,4 @@
-defmodule MetroServerPhoenix.ConnCase do
+defmodule Frizzle.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -20,23 +20,23 @@ defmodule MetroServerPhoenix.ConnCase do
       # Import conveniences for testing with connections
       use Phoenix.ConnTest
 
-      alias MetroServerPhoenix.Repo
+      alias Frizzle.Repo
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
 
-      import MetroServerPhoenix.Router.Helpers
+      import Frizzle.Router.Helpers
 
       # The default endpoint for testing
-      @endpoint MetroServerPhoenix.Endpoint
+      @endpoint Frizzle.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(MetroServerPhoenix.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Frizzle.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(MetroServerPhoenix.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Frizzle.Repo, {:shared, self()})
     end
 
     {:ok, conn: Phoenix.ConnTest.build_conn()}

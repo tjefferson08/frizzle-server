@@ -1,4 +1,4 @@
-defmodule MetroServerPhoenix.ErrorHelpers do
+defmodule Frizzle.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
@@ -32,9 +32,9 @@ defmodule MetroServerPhoenix.ErrorHelpers do
     #     dgettext "errors", "is invalid"
     #
     if count = opts[:count] do
-      Gettext.dngettext(MetroServerPhoenix.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(Frizzle.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(MetroServerPhoenix.Gettext, "errors", msg, opts)
+      Gettext.dgettext(Frizzle.Gettext, "errors", msg, opts)
     end
   end
 end

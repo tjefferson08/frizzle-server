@@ -2,21 +2,21 @@
 #
 #     mix run priv/repo/seeds.exs
 #
-defmodule MetroServerPhoenix.LoadGtfs do
-  alias MetroServerPhoenix.Repo
+defmodule Frizzle.LoadGtfs do
+  alias Frizzle.Repo
 
   @insert_batch_size 1000
 
   @model_map [
-    %{model: Module.concat(MetroServerPhoenix, "Stop"),
+    %{model: Module.concat(Frizzle, "Stop"),
       filename: "google_transit/stops.txt"},
-    %{model: Module.concat(MetroServerPhoenix, "Route"),
+    %{model: Module.concat(Frizzle, "Route"),
       filename: "google_transit/routes.txt"},
-    %{model: Module.concat(MetroServerPhoenix, "StopTime"),
+    %{model: Module.concat(Frizzle, "StopTime"),
       filename: "google_transit/stop_times.txt"},
-    %{model: Module.concat(MetroServerPhoenix, "Trip"),
+    %{model: Module.concat(Frizzle, "Trip"),
       filename: "google_transit/trips.txt"},
-    %{model: Module.concat(MetroServerPhoenix, "Calendar"),
+    %{model: Module.concat(Frizzle, "Calendar"),
       filename: "google_transit/calendar.txt"}
   ]
 
@@ -55,6 +55,6 @@ defmodule MetroServerPhoenix.LoadGtfs do
   end
 end
 
-MetroServerPhoenix.LoadGtfs.clear
-MetroServerPhoenix.LoadGtfs.load_all
+Frizzle.LoadGtfs.clear
+Frizzle.LoadGtfs.load_all
 

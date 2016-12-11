@@ -1,12 +1,12 @@
-defmodule MetroServerPhoenix.Trip do
-  use MetroServerPhoenix.Web, :model
+defmodule Frizzle.Trip do
+  use Frizzle.Web, :model
 
   @primary_key {:trip_id, :integer, []}
   schema "trips" do
     field :service_id,    :string
     field :trip_headsign, :string
 
-    belongs_to :route, MetroServerPhoenix.Route
+    belongs_to :route, Frizzle.Route
   end
 
   @doc """

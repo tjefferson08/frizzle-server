@@ -1,4 +1,4 @@
-# MetroServerPhoenix
+# Frizzle
 
 To start your Phoenix app:
 

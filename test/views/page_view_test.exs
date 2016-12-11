@@ -1,3 +1,3 @@
-defmodule MetroServerPhoenix.PageViewTest do
-  use MetroServerPhoenix.ConnCase, async: true
+defmodule Frizzle.PageViewTest do
+  use Frizzle.ConnCase, async: true
 end

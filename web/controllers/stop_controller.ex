@@ -1,6 +1,6 @@
-defmodule MetroServerPhoenix.StopController do
-  use MetroServerPhoenix.Web, :controller
-  alias MetroServerPhoenix.Stop
+defmodule Frizzle.StopController do
+  use Frizzle.Web, :controller
+  alias Frizzle.Stop
 
   def index(conn, _params) do
     render conn, "index.html"

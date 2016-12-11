@@ -1,5 +1,5 @@
-defmodule MetroServerPhoenix.StopControllerTest do
-  use MetroServerPhoenix.ConnCase
+defmodule Frizzle.StopControllerTest do
+  use Frizzle.ConnCase
 
   test "GET /api/stops/near-me"
   test "GET /api/stops/with-routes"

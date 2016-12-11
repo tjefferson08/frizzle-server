@@ -1,12 +1,12 @@
-defmodule MetroServerPhoenix.Web do
+defmodule Frizzle.Web do
   @moduledoc """
   A module that keeps using definitions for controllers,
   views and so on.
 
   This can be used in your application as:
 
-      use MetroServerPhoenix.Web, :controller
-      use MetroServerPhoenix.Web, :view
+      use Frizzle.Web, :controller
+      use Frizzle.Web, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -30,12 +30,12 @@ defmodule MetroServerPhoenix.Web do
     quote do
       use Phoenix.Controller
 
-      alias MetroServerPhoenix.Repo
+      alias Frizzle.Repo
       import Ecto
       import Ecto.Query
 
-      import MetroServerPhoenix.Router.Helpers
-      import MetroServerPhoenix.Gettext
+      import Frizzle.Router.Helpers
+      import Frizzle.Gettext
     end
   end
 
@@ -49,9 +49,9 @@ defmodule MetroServerPhoenix.Web do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
-      import MetroServerPhoenix.Router.Helpers
-      import MetroServerPhoenix.ErrorHelpers
-      import MetroServerPhoenix.Gettext
+      import Frizzle.Router.Helpers
+      import Frizzle.ErrorHelpers
+      import Frizzle.Gettext
     end
   end
 
@@ -65,10 +65,10 @@ defmodule MetroServerPhoenix.Web do
     quote do
       use Phoenix.Channel
 
-      alias MetroServerPhoenix.Repo
+      alias Frizzle.Repo
       import Ecto
       import Ecto.Query
-      import MetroServerPhoenix.Gettext
+      import Frizzle.Gettext
     end
   end
 

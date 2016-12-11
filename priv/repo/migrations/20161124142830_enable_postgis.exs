@@ -1,4 +1,4 @@
-defmodule MetroServerPhoenix.Repo.Migrations.EnablePostgis do
+defmodule Frizzle.Repo.Migrations.EnablePostgis do
   use Ecto.Migration
 
   def up do

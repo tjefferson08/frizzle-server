@@ -6,15 +6,15 @@
 use Mix.Config
 
 # General application configuration
-config :metro_server_phoenix,
-  ecto_repos: [MetroServerPhoenix.Repo]
+config :frizzle,
+  ecto_repos: [Frizzle.Repo]
 
 # Configures the endpoint
-config :metro_server_phoenix, MetroServerPhoenix.Endpoint,
+config :frizzle, Frizzle.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "479WNM/UqKHtZ6M4ri/l2Q9cObumznJM78f5FXDXSgj9VVwN0nrD4TPLAZ1SkRV/",
-  render_errors: [view: MetroServerPhoenix.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: MetroServerPhoenix.PubSub,
+  render_errors: [view: Frizzle.ErrorView, accepts: ~w(html json)],
+  pubsub: [name: Frizzle.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger

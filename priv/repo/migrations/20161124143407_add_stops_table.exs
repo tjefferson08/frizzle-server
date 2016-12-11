@@ -1,4 +1,4 @@
-defmodule MetroServerPhoenix.Repo.Migrations.AddStopsTable do
+defmodule Frizzle.Repo.Migrations.AddStopsTable do
   use Ecto.Migration
 
   def up do

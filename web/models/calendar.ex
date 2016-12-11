@@ -1,5 +1,5 @@
-defmodule MetroServerPhoenix.Calendar do
-  use MetroServerPhoenix.Web, :model
+defmodule Frizzle.Calendar do
+  use Frizzle.Web, :model
 
   schema "calendar" do
     field :service_id,   :string

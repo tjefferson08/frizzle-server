@@ -1,5 +1,5 @@
-defmodule MetroServerPhoenix.Route do
-  use MetroServerPhoenix.Web, :model
+defmodule Frizzle.Route do
+  use Frizzle.Web, :model
 
   @primary_key {:route_id, :integer, []}
   schema "routes" do

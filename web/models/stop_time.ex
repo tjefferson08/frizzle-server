@@ -1,13 +1,13 @@
-defmodule MetroServerPhoenix.StopTime do
-  use MetroServerPhoenix.Web, :model
+defmodule Frizzle.StopTime do
+  use Frizzle.Web, :model
 
   schema "stop_times" do
     field :arrival_time,   :string
     field :departure_time, :string
     field :stop_sequence,  :integer
 
-    belongs_to :stop, MetroServerPhoenix.Stop
-    belongs_to :trip, MetroServerPhoenix.Trip
+    belongs_to :stop, Frizzle.Stop
+    belongs_to :trip, Frizzle.Trip
   end
 
   @doc """
