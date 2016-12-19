@@ -34,7 +34,7 @@ defmodule Frizzle.Stop do
     %{rows: rows, num_rows: _} = Ecto.Adapters.SQL.query!(
       repo,
       "SELECT s.stop_id, s.stop_name, s.stop_desc,
-         ST_Distance(
+         ST_Distance_Sphere(
            ST_GeomFromText(
              CONCAT(
                'POINT(',
