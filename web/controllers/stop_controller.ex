@@ -20,10 +20,9 @@ defmodule Frizzle.StopController do
       }
     else
       IO.inspect changeset.errors
-      json conn, %{
-        status: :ok,
-        data: []
-      }
+      conn
+      |> put_status(:bad_request)
+      |> json %{ status: :error }
     end
   end
 
