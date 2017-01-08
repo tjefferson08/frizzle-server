@@ -15,24 +15,24 @@ defmodule Frizzle.StopController do
     if (changeset.valid?) do
       conn
       |> put_resp_header("access-control-allow-origin", "*")
-      |> json %{
+      |> json(%{
         status: :ok,
         data: Stop.nearby!(Repo, { lat, lon })
-      }
+      })
     else
       IO.inspect changeset.errors
       conn
       |> put_status(:bad_request)
-      |> json %{ status: :error }
+      |> json(%{ status: :error })
     end
   end
 
   def with_routes(conn, %{ "stop-ids" => stop_ids }) do
     conn
     |> put_resp_header("access-control-allow-origin", "*")
-    |> json %{
+    |> json(%{
       status: :ok,
       data: Stop.include_routes!(Repo, String.split(stop_ids, ","))
-    }
+    })
   end
 end
