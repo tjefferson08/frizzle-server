@@ -78,11 +78,9 @@ defmodule Frizzle.Stop do
       [],
       []
     )
-    Enum.map(rows, fn row ->
+    Enum.reduce(rows, %{}, fn row, acc ->
       [ stop_id, route_short_names ] = row
-      %{stop_id: stop_id,
-        route_short_names: route_short_names
-      }
+      Map.merge(acc, %{Integer.to_string(stop_id) => route_short_names})
     end)
   end
 
